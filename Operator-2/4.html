@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="color: blue; text-align:center;">----------Report card ----------    </h1>
+
+        <h2>Enter mark of CF</h2>
+        <input type="text" id="inn1">
+    
+        <h2>Enter mark of NET</h2>
+        <input type="text" id="inn2">
+    
+        <h2>Enter mark of CT</h2>
+        <input type="text" id="inn3">
+
+        <h1 id="Ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+    a = document.getElementById("inn1").value;
+    b = document.getElementById("inn2").value;
+    c = document.getElementById("inn3").value;
+
+    f = +a + +b + +c ;
+    g = f / 3;
+
+    document.getElementById("Ans").innerHTML = "Your total marks is " + f + " and your percentage is " + g;
+
+</script>

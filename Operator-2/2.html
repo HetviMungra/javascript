@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="color: blue; text-align:center;">----------Simple Interest ----------    </h1>
+    <h2>Enter Principal amount</h2>
+    <input type="text" id="inn1">
+
+    <h2>Enter Rate of interest</h2>
+    <input type="text" id="inn2">
+
+    <h2>Enter Time in years</h2>
+    <input type="text" id="inn3">
+
+    <h1 id="Ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+
+    var p = document.getElementById("inn1").value;
+    var r = document.getElementById("inn2").value;
+    var t = document.getElementById("inn3").value;
+    var interest = (p * r * t) / 100;
+    var ans = document.getElementById("Ans").innerHTML =  interest ;
+</script>

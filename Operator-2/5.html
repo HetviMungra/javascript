@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="color: blue; text-align:center;">----------GST ----------    </h1>
+
+        <h2>Enter Origenal cost</h2>
+    <input type="text" id="inn1">
+
+    <h2>Enter Gst Rate</h2>
+    <input type="text" id="inn2">
+
+    <h1 id="Ans"></h1>
+
+    
+    </center>
+</body>
+</html>
+<script>
+    a = document.getElementById("inn1").value;
+    b = document.getElementById("inn2").value;
+
+     var gst =+a +(+a *(+b/100)) ;
+     var final = +a + +gst;
+   
+     
+    document.getElementById("Ans").innerHTML = gst;
+
+</script>
