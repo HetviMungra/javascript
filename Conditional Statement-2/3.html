@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------- Calculate  largest Number -------</h1>
+    </center>
+    <h3>
+        Enter First Number : 
+        <input type="text" id="int2">
+    </h3>
+    <h3>
+        Enter Second Number : 
+        <input type="text" id="int3">
+    </h3>
+    <h3>
+        Enter Third Number : 
+        <input type="text" id="int4">
+    </h3>
+    <h3>
+        Enter Fourth Number : 
+        <input type="text" id="int5">
+    </h3>
+    <h3>
+        Enter Fourth Number : 
+        <input type="text" id="int6">
+    </h3>
+    <h2 id="ans2"></h2>
+</body>
+</html>
+<script>
+
+    let min1 = document.getElementById("int2").value
+    let min2 = document.getElementById("int3").value
+    let min3 = document.getElementById("int4").value
+    let min4 = document.getElementById("int5").value
+    let min5 = document.getElementById("int6").value
+    if(min1 === "" && min2 === "" && min3 === "" && min4 === "" && min5 === "")
+    {
+        document.getElementById("ans2").innerHTML = "Invalid Number's"
+    }
+    else
+    {
+        if(min1>min2 && min1>min3 && min1>min4 && min1>min5)
+        {
+            document.getElementById("ans2").innerHTML = "'"+min1+"' First Number is largest..."
+        }
+        else if(min2>min1 && min2>min3 && min2>min4 && min2>min5)
+        {
+            document.getElementById("ans2").innerHTML = "'"+min2+"' Second Number is largest..."
+        }
+        else if(min3>min1 && min3>min2 && min3>min4 && min3>min5)
+        {
+            document.getElementById("ans2").innerHTML = "'"+min3+"' Third Number is largest..."
+        }
+        else if (min4>min1 && min4>min2 && min4>min3 && min4>min5)
+        {
+            document.getElementById("ans2").innerHTML = "'"+min4+"' Fourth Number is largest..."
+        }
+        else
+        {
+            document.getElementById("ans2").innerHTML = "'"+min5+"' Fourth Number is largest..."
+ 
+        }
+    }
+
+
+
+</script>

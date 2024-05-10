@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> *****Grading System:*****</h1>
+    <h1>
+        student's score  :
+    </h1>
+    <input type="text" id="inn1">
+    <h1 id="ans"></h1>
+
+</body>
+</html>
+
+   <script>
+      var a = document.getElementById("inn1").value
+
+if(a === "")
+{
+    document.getElementById("ans").innerHTML = "invaled number"
+}
+else{
+    if(a > 90 && a<100)
+    {
+        document.getElementById("ans").innerHTML = "A"
+    }
+    else if(a >= 80 && a < 89)
+    {
+        document.getElementById("ans").innerHTML = "B"
+
+    }
+    else if (a >= 70 && a < 79)
+    {
+        document.getElementById("ans").innerHTML = "C"
+
+    }
+    else if (a >= 60 && a < 69)
+    {
+        document.getElementById("ans").innerHTML = "D"
+
+    }
+    else{
+        document.getElementById("ans").innerHTML = " F"
+    }
+}
+   </script>
+ 

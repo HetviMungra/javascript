@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------- Calculate Electricity Bill -------</h1>
+    </center>
+    <h3>
+        Enter The Number Of Units Consumed : 
+        <input type="text" id="int1">
+    </h3>
+    <h2 id="ans1"></h2>
+
+</body>
+</html>
+<script>
+
+
+    let units = document.getElementById("int1").value
+    let bill = 0.0;
+    if(units === "")
+    {
+        document.getElementById("ans1").innerHTML = "Invalid Unit"
+    }
+    else
+    {
+        if(units < 0)
+        {
+            printf("Invalid input.\n");
+        }
+        else if(units > 0 && units <=100) 
+        {
+            bill = units * 1.0;
+        }
+        else if(units > 100 && units <=200)
+        {
+            bill = (100 * 1.0) + ((units - 100) * 2.0);
+        }
+        else
+        {
+            bill = (100 * 1.0) + (100 * 2.0) + ((units - 200) * 3.0);
+        }
+
+        document.getElementById("ans1").innerHTML = "Total Bill For "+units+" is : "+bill     
+    }
+
+
+
+</script>
