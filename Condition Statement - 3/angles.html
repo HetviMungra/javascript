@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>-----angles-----</h1>
+    <h1>Enter first angles</h1>
+    <input type="text" id="inn1">
+    <h1>Enter second angles</h1>
+    <input type="text" id="inn2">
+    <h1>Enter third angles</h1>
+    <input type="text" id="inn3">
+    <h1 id="ans"></h1>
+    <h1 id="type"></h1>
+</body>
+</html>
+<script>
+    let a =document.getElementById("inn1").value 
+    let b =document.getElementById("inn2").value 
+    let c =document.getElementById("inn3").value
+    
+    let sum = +a + +b + +c
+    
+    if(a === "" && b=== "" && c === ""){
+        document.getElementById("ans").innerHTML = "Enter valid number"
+    }
+    else
+    {
+        if(sum === 180)
+        {
+            document.getElementById("ans").innerHTML = "Triangle"
+
+            if(a === b && b === c && c === d)
+            {
+                document.getElementById("type").innerHTML ="Equilateral Triangle"
+            }
+            else if (a === b || b === c || c === d)
+            {
+                document.getElementById("type").innerHTML ="Isosceles Triangle " 
+            }
+            else{
+                document.getElementById("type").innerHTML ="Scalene Triangle"
+            }
+        }
+        else{
+            document.getElementById("ans").innerHTML = "Not a Triangle"
+        }
+    }
+
+</script>
