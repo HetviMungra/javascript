@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>******Restaurant Bill******</h1>
+    <h1>Total amount of bill:</h1>
+    <input type="text" id="inn1">
+    <h1>Total GST:</h1>
+    <input type="text" id="inn2">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+ a = document.getElementById("inn1").value;
+    b = document.getElementById("inn2").value;
+
+     var gst =+a +(+a *(+b/100)) ;
+     var final = +a + +gst;
+   
+     
+    document.getElementById("ans").innerHTML = gst;
+
+
+</script>
