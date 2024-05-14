@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>***** Calculates a discount*****</h1>
+        <h1>Enter purchase_amount :</h1>
+        <input type="text" id="inn1">
+        <h2 id="ans"></h2>
+        <h2 id="a1"></h2>
+    </center>
+</body>
+</html>
+<script>
+var a = document.getElementById("inn1").value 
+var totalCost = a 
+var discount 
+var costToPaid
+
+if(a === "")
+{
+    document.getElementById("ans").innerHTML = "Invalid value"
+}
+else
+{
+    if(a>100)
+    {
+         discount = (totalCost*10)/100;
+         costToPaid = totalCost - discount;
+         document.getElementById("ans").innerHTML ="\nCongrats, You've got 20% discount on the total Purchase"
+         document.getElementById("a1").innerHTML ="\nThe cost to be Paid is: " + costToPaid
+
+
+    }
+    else if (a>=50  && a<=100)
+    {
+         discount = (totalCost*20)/100;
+         costToPaid = totalCost - discount;
+         document.getElementById("ans").innerHTML ="\nCongrats, You've got 10% discount on the total Purchase"
+         document.getElementById("a1").innerHTML ="\nThe cost to be Paid is: " + costToPaid
+
+    }
+    else{
+        costToPaid = totalCost;
+        document.getElementById("a1").innerHTML ="\nSorry, there is no discount to apply."
+
+    }
+
+}
+
+
+
+
+</script>

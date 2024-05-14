@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        ***** simple number guessing game *****
+    </h1>
+    <h1>Enter secret number </h1>
+    <input type="text " id="inn1">
+    <h2 id="ans"></h2>
+</body>
+</html>
+<script>
+    var a = document.getElementById("inn1").value 
+    var secret_no = 25
+    if(a === "")
+{
+    document.getElementById("ans").innerHTML = "Invalid value"
+}
+else
+{
+    if(a == secret_no)
+    {
+        document.getElementById("ans").innerHTML = "You are win ☻"
+  
+    }
+    else if(a>0 && a<=24)
+    {
+        document.getElementById("ans").innerHTML = "guess is higher"
+  
+    }
+    else
+    {
+        document.getElementById("ans").innerHTML = "guess is lower"
+
+    }
+}
+</script>
