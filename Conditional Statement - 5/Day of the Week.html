@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>**Title:** Day of the Week    </h1>
+    <h2 style="color: red;">Please day name in lowercase..</h2>
+
+    <h2>Enter a number :</h2>
+    <input type="text" id = "inn">
+
+    <h3 id="ans"></h3>
+</body>
+</html>
+<script>
+    var a = document.getElementById("inn").value 
+    
+    if(a === "")
+    {
+        document.getElementById("ans").innerHTML = ""
+    }
+    else
+    {
+        switch(a)
+        {
+            case "Monday" :
+                document.getElementById("ans").innerHTML = "It's the start of the workweek.";
+                break
+            case "Tuesday" :
+                document.getElementById("ans").innerHTML = "It's the secondday of the workweek..";
+                break   
+            case "Wednesday" :
+                document.getElementById("ans").innerHTML = "It's Thirdday of the workweek.. ";
+                break 
+            case "Thursday" :
+                document.getElementById("ans").innerHTML = "It's Fourthday of the workweek.. ";
+                break 
+             case "Friyday" :
+                document.getElementById("ans").innerHTML = "It's start almost the weekend.";
+                break   
+            case "Saturday" :
+                document.getElementById("ans").innerHTML = "It's  holiyday";
+                break   
+            case "Sunday" :
+                document.getElementById("ans").innerHTML = "It's  last holiyday";
+                break   
+            default:
+                document.getElementById("ans").innerHTML = "It's some other day.";
+                break           
+        }
+    }
+</script>

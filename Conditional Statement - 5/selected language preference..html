@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <hr>
+        <h1>
+           **** selected language preference.****
+               </h1>
+              
+        <select name="" id="inn">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+        </select>
+    
+    <br>
+        <h3 id="ans"></h3>
+        
+        <button id="go">Reload</button>
+        <hr>
+    </center>
+</body>
+</html>
+<script>
+    var a = document.getElementById("inn").value 
+
+ // ---------------------------------------
+
+                const refreshButton = document.getElementById("go");
+
+                // Add event listener to the button
+                refreshButton.addEventListener('click', function() 
+                {
+                    // Reload the page
+                    location.reload();
+                });
+                
+// ---------------------------------------
+    if(a === "")
+    {
+        document.getElementById("ans").innerHTML = ""
+    }
+    else
+    {
+switch(a)
+{
+    case "English" : document.getElementById("ans").innerHTML = "Hello!"
+    break
+    case "Spanish" : document.getElementById("ans").innerHTML = "¡Hola!"
+    break
+    case "French" : document.getElementById("ans").innerHTML = "Bonjour!"
+    break
+    default : document.getElementById("ans").innerHTML = "Language not supported."
+    break
+}
+    }
+</script>

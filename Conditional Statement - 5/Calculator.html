@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <hr>
+        <h1>
+            **Title:** Calculator
+               </h1>
+    
+        <h2>Enter  operator :</h2>
+        <input type="text" id = "inn">
+        <h2>Enter  a value :</h2>
+        <input type="text" id = "inn1">
+        <h2>Enter a value :</h2>
+        <input type="text" id = "inn2">
+    
+    
+        <h3 id="ans"></h3>
+        <hr>
+    </center>
+</body>
+</html>
+<script>
+     var a = document.getElementById("inn").value 
+     var b = document.getElementById("inn1").value 
+     var c = document.getElementById("inn2").value 
+     var d 
+    if(a === "")
+    {
+        document.getElementById("ans").innerHTML = ""
+    }
+    else
+    {
+        switch(a)
+        {
+            case "+" :
+                d = +b + +c
+                document.getElementById("ans").innerHTML = "Ans is :" + d;
+                break
+            case "-" :
+                 d = +b - +c
+                document.getElementById("ans").innerHTML = "Ans is :" + d;
+                break   
+            case "*" :
+                d = +b * +c
+                document.getElementById("ans").innerHTML = "Ans is :" + d;
+                break 
+            case "/" :
+                d = +b / +c
+                document.getElementById("ans").innerHTML = "Ans is :" + d;
+                break 
+             
+            default:
+                document.getElementById("ans").innerHTML = " Invlid operator  ";
+                break           
+        }
+    }
+</script>
