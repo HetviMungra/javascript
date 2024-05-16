@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>****Palindrome****</h1>
+        <h1>Enter your string :</h1>
+        <input type="text" id="inn">
+        <br>
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+    var str = document.getElementById ("inn").value 
+
+    var res = ""
+    var res2 = ""
+    for(let i = 0 ; i<=str.length-1 ; i++)
+    {
+        res += str[i]
+    }
+    for (let i = str.length-1 ; i >= 0 ; i++)
+    {
+        res2 += str[i]
+    }
+if(str === "")
+{
+    document.getElementById("ans").innerHTML = "invalid"
+  
+}
+ else{
+    if(res === res2)
+    {
+        document.getElementById("ans").innerHTML = "Palindrome"
+  
+    }
+    else
+    {
+        document.getElementById("ans").innerHTML = "Not a Palindrome"
+
+    }
+ }
+</script>
