@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <center>
+        <h1> ----- REVERCE NUMBER -----</h1>
+        <hr>
+
+        <h1>Enter a number :</h1>
+        <input type="text" id="in1">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+    let a = document.getElementById("in1").value
+    let rev = 0 , rem
+
+    while(a != 0){
+        rem = a % 10
+        rev = rev * 10 + rem
+        a = Math.floor(a / 10)
+    }
+
+    document.getElementById("ans").innerHTML +=rev
+</script>

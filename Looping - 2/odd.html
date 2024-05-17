@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <H1>----- ODD -----</H1>
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let number = 20;
+
+do {
+    if (number % 2 === 1) {
+        document.getElementById("ans").innerHTML += number +" <br>"
+    }
+    number++;
+} while (number <= 40);
+</script>

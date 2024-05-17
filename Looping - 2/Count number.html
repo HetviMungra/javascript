@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>-----Count number of digita-----</h1>
+        <h3>Enter Any Number :</h3>
+        <input type=" text" id="in1">
+        <h2 id="ans1"></h2>
+    </center>
+</body>
+</html>
+<script>
+    let num1= document.getElementById("in1").value
+
+    let i=0, count=0
+    if (num1 === ""){
+        document.getElementById("ans1").innerHTML="INVALID"
+    }
+    else{
+        do{
+            count++
+            i++
+        }while (num1[i])
+        document.getElementById("ans1").innerHTML=count
+    }
+</script>
