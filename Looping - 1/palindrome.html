@@ -7,7 +7,7 @@
 </head>
 <body>
     <center>
-        <h1>****Palindrome****</h1>
+        <h1>****Palindrome****</h1>                                
         <h1>Enter your string :</h1>
         <input type="text" id="inn">
         <br>
@@ -16,7 +16,7 @@
 </body>
 </html>
 <script>
-    var str = document.getElementById ("inn").value 
+    var str = document.getElementById("inn").value 
 
     var res = ""
     var res2 = ""
@@ -24,7 +24,7 @@
     {
         res += str[i]
     }
-    for (let i = str.length-1 ; i >= 0 ; i++)
+    for (let i = str.length-1 ; i >= 0 ; i--)
     {
         res2 += str[i]
     }
