@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------------- FizzBuzz -------------</h1>
+    </center>
+    <h1>
+        Enter Your Starting number : 
+        <input type="number" id="inn">
+    </h1>
+    <h1>
+        Enter Your Ending number : 
+        <input type="number" id="inn1">
+    </h1>
+    <h2 id="ans"></h2>
+</body>
+</html>
+
+<script>
+     let st_nu = document.getElementById("inn").value 
+    let en_nu = document.getElementById("inn1").value
+
+ 
+ var result = ''
+ if(st_nu === "" && en_nu === "")
+    {
+        document.getElementById("ans").innerHTML = "Invalid Number"
+    }
+else{
+    for(var a = st_nu ; a <= en_nu ; a ++)
+    { 
+        if(a % 3 === 0 && a % 5 === 0)
+        {
+            result += "FizzBuzz <br>"
+        }
+        else if(a % 3 === 0)
+        {
+            result += "Fizz <br>"
+        }
+        else if (a % 5 === 0)
+        {
+              result +="Buzz <br>"
+        }
+        else
+        {
+            result += a + "<br>"
+        }
+        
+    }
+    document.getElementById("ans").innerHTML =  result 
+}
+</script>
+

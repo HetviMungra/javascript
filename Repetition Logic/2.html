@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------------- Sum Of Digit -------------</h1>
+    </center>
+    <h3>
+        Enter Any Number : 
+        <input type="number" id="inn">
+    </h3>
+    <h2 id="ans"></h2>
+</body>
+</html>
+<script>
+    let num = document.getElementById("inn").value
+    let digit = 0
+
+    if(num === "")
+    {
+        document.getElementById("ans").innerHTML = "Invalid Number"
+    }
+    else
+    {
+        for(let i=0; num[i]; i++)
+        {
+            digit += num[i] - '0'
+        }
+        document.getElementById("ans").innerHTML = "Sum Of All Digit is : "+digit
+    }
+    
+</script>
+                                                                                            
