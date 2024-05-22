@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+  
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2> Reverse the digits.</h2>
+    <hr><br>
+    <h4>Enter your number</h4>
+
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <p id="result"></p>
+</div>
+
+<script>
+  Reverse  =() => {
+    let number = document.getElementById("numberInput").value;
+    let rev = 0 , rem
+
+    while(number != 0){
+        rem = number % 10
+        rev = rev * 10 + rem
+        number = Math.floor(number / 10)
+    }
+    document.getElementById("result").innerHTML += "Ans = " + rev
+   }
+   Reverse  ()
+
+</script>
+
+</body>
+</html>

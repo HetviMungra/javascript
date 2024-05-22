@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odd </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+  
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2> Odd number</h2>
+    <hr><br>
+    <h4> Enter Your Starting number : </h4>
+
+    <input type="number" id="numberInput" placeholder="Enter a number" />
+    <h4> Enter Your Ending number : </h4>
+
+    <input type="number" id="numberInput1" placeholder="Enter a number" />
+    <p>odd number is </p>
+    <p id="ans"></p>
+</div>
+
+<script>
+var a = function odd (){
+    var st_nu = document.getElementById("numberInput").value;
+    var en_nu = document.getElementById("numberInput1").value;
+    if(st_nu === "" && en_nu === "")
+    {
+        document.getElementById("ans").innerHTML = ""
+    }
+else{
+    for(var a = st_nu ; a <= en_nu ; a ++)
+    { 
+        if(a % 2 != 0 )
+        {
+            document.getElementById("ans").innerHTML += a + " ";
+        }
+    }
+    }
+}
+a ()
+</script>
+
+</body>
+</html>

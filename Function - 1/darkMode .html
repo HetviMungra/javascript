@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+</style>
+<body>
+    <h1>----- DarkMode -----</h1>
+    <label for="">Choice Mode :</label>
+<select id="select">
+    <option value="dark">darkMode</option>
+    <option value="light">lightMode</option>
+
+</select>
+<p id="ans1"></p>
+<p id="ans2"></p>
+</body>
+</html>
+<script>
+let mode = document.getElementById("select").value
+const DarkMode = () => {
+    if(mode === "dark")
+    {
+        document.getElementById('ans1').innerText = "Darkmode ON"
+  
+    }
+    else{
+        document.getElementById('ans2').innerText = "Darkmode OFF"
+
+    }
+};
+
+DarkMode();
+
+</script>
