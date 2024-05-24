@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Kilometers To Miles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .calculator input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .calculator button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Convert Kilometers To Miles</h2><hr><br>
+        <label for="">Enter kilometers</label>
+        <input type="number" id="num1" placeholder="Enter first number">
+
+      <div class="result" id="result"></div>
+    </div>
+
+   
+</body>
+</html>
+
+
+<script>
+let  kilometers = document.getElementById("num1").value 
+
+
+
+function  km_to_miles ( kilometers)
+{
+    var miles = kilometers * 0.621371;
+    return miles;
+}
+document.getElementById("result").innerHTML = " Miles :" + km_to_miles ( kilometers) 
+
+</script>
