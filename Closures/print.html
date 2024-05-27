@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Message</title>
+</head>
+<body>
+    <center>
+        <h1>------------------ Greeting Message ------------------</h1>
+    </center>
+    <h3>
+        Enter Any Name : 
+        <input type="text" id="innt">
+    </h3>
+    <h2 id="ans"></h2>
+    
+</body>
+</html>
+
+<script>
+    let user_name = document.getElementById("innt").value
+
+if(user_name === "")
+{
+    document.getElementById("ans").innerHTML = "Invalid Name"
+}
+else
+{
+    function message(user_name)
+    {
+        document.getElementById("ans").innerHTML = "Hello, "+user_name+"<br>"
+        function msg()
+        {
+            document.getElementById("ans").innerHTML += "How Are You ???"
+        }
+        msg()
+    }
+    message(user_name)
+}
+   
+</script>
+
+  

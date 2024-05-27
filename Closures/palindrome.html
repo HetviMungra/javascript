@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------------------ String Palindrome Or Not ------------------</h1>
+    </center>
+    <h3>
+        Enter First String : 
+        <input type="text" id="int7">
+    </h3>
+    <h2 id="ans4"></h2>
+</body>
+</html>
+<script>
+    let str = document.getElementById("int7").value
+let empty1 = ""
+let empty2 = ""
+
+if(str === "")
+{
+    document.getElementById("ans4").innerHTML = "Invalid String"
+}
+else
+{
+    for(let i=0; str[i]; i++)
+    {
+        empty1 +=str[i]
+    }
+    for(let i=str.length-1; i>=0; i--)
+    {
+        empty2 +=str[i]
+    }
+    if(empty1 === empty2)
+    {
+        document.getElementById("ans4").innerHTML = " Palindrome"
+    }
+    else
+    {
+        document.getElementById("ans4").innerHTML = " Not Palindrome"
+    }
+}
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUM</title>
+</head>
+<body>
+    <Center>
+        <h1>------------- Sum Of Three Number -------------</h1>
+    </Center>
+    <h3>
+        Enter First Number : 
+        <input type="number" id="int1">
+    </h3>
+    <h3>
+        Enter Second Number : 
+        <input type="number" id="int2">
+
+    </h3>
+    <h3>
+        Enter Third Number : 
+        <input type="number" id="int3">
+    </h3>
+    <h2 id="ans1"></h2>
+</body>
+</html>
+
+<script>
+    let num1 = document.getElementById("int1").value
+    let num2 = document.getElementById("int2").value
+    let num3 = document.getElementById("int3").value
+
+    function sum_num1(num1) 
+    {
+        function sum_num2(num2) 
+        {
+            function sum_num3(num3) 
+            {
+                document.getElementById("ans1").innerText = "Sum Of "+num1+" , "+num2+" and "+num3+" is : "+ (+num1 + +num2 + +num3)
+            }
+            sum_num3(num3) 
+        }
+        sum_num2(num2) 
+    }
+    sum_num1(num1) 
+   
+</script>
+

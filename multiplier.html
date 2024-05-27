@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------------------ Product Of Factor ------------------</h1>
+    </center>
+    <h3>
+        Enter First Factor : 
+        <input type="number" id="int5">
+    </h3>
+    <h3>
+        Enter Second Factor : 
+        <input type="number" id="int6">
+    </h3>
+    <h2 id="ans3"></h2>
+    <br><hr><br>
+
+
+    <center>
+</body>
+</html>
+<script>
+    
+    let fact1 = document.getElementById("int5").value
+let fact2 = document.getElementById("int6").value
+
+if(fact1 === "" && fact2 === "")
+{
+    document.getElementById("ans3").innerHTML = "Invalid Number"
+}
+else
+{
+    function factor_1(fact1)
+    {
+        function factor_2(fact2)
+        {
+            let product = fact1 * fact2
+            document.getElementById("ans3").innerHTML = "Product of "+fact1+" and "+fact2+" is : "+product+"<br>Factor Of &nbsp;"+product+" is : "
+
+            for(let i=1; i<=product; i++)
+            {
+                if(product%i == 0)
+                {
+                    document.getElementById("ans3").innerHTML += i+"&nbsp;&nbsp;&nbsp;&nbsp;"
+                }
+            }
+        }
+        factor_2(fact2)
+    }
+    factor_1(fact1)
+}
+</script>
