@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>factorial</h1>
+
+        <label for="">Enter a number :</label>
+        <input type="text" id="inn">
+        <h2 id="ans"></h2>
+    </center>
+</body>
+</html>
+<script>
+
+let a = document.getElementById("inn").value
+
+if(a === "")
+{
+    document.getElementById("ans").innerHTML = "Invalid Number"
+}
+else
+{
+    factorial = (a) =>
+    {
+        if(a <= 1)
+        {
+            return 1
+        }
+        else
+        {
+            return a * factorial(a - 1)
+        }
+    }
+    document.getElementById("ans").innerHTML = "Factorial Of &nbsp;"+a+" is : "+factorial(a)
+}
+
+</script>
