@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Odd Elements</title>
+</head>
+<body>
+    <center>
+        <u><b><h2>Sum of Odd Elements</h2></b></u>
+    <h2>Enter a comma-separated list of numbers:</h2>
+    <input type="text" id="inn" >
+    <!-- <button onclick="sumOddElements()">Calculate Sum</button> -->
+    <h2>Sum of Odd Elements:</h2>
+    <h2 id="ans"></h2>
+    </center>
+
+    <script>
+        function oddhof() {
+           
+            let a = document.getElementById('inn').value;
+            let Array = a.split(',').map(Number);
+
+            let sum = Array.reduce((acc, num) => {
+                if (num % 2 !== 0) {
+                    return acc + num;
+                }
+                return acc;
+            }, 0);
+
+            document.getElementById('ans').innerHTML = sum;
+        }
+        oddhof()
+    </script>
+</body>
+</html>
