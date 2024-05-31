@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>----------------- Remove 2 Elements Using shift() -----------------</h1>
+        <h2 id="ans"></h2>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    let arr = ["Apple", "Pineapple", "Strawberry", "Mango", "Orange"]
+
+    document.getElementById("ans").innerHTML = "All Fruit Of an Arrary is : " + arr + "<br>"
+    arr.shift()
+    arr.shift()
+    console.log(arr)
+    document.getElementById("ans").innerHTML += "Two Fruit Remove From an Arrary is : " + arr
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1> --------- Remove Color Using Loop and shift() ---------</h1>
+        <h2 id="ans"></h2>
+
+    </center>
+
+
+
+</body>
+
+</html>
+<script>
+    let arr = ["Red", "Green", "Blue"]
+
+    document.getElementById("ans").innerHTML = "All Colors Of an Arrary is : " + arr + "<br>"
+    for (let i = arr.length - 1; i >= 0; i--) {
+        arr.shift(i)
+    }
+    console.log(arr)
+    document.getElementById("ans").innerHTML += "All Color Remove From an Arrary" + arr
+
+</script>

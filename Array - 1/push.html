@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>`push()` method</title>
+</head>
+
+<body>
+    <center>
+        <h1>----- Use a loop to add numbers-----</h1>
+
+        <label for="">Enter a starting point</label>
+        <input type="number" id="inn">
+        <br><br>
+        <label for="">Enter a starting point</label>
+        <input type="number" id="inn1">
+
+        <H2 id="ans"></H2>
+    </center>
+</body>
+
+</html>
+<script>
+
+    let start = document.getElementById("inn").value
+    let end = document.getElementById("inn1").value
+    let arr_1 = []
+
+    if (start === "" && end === "") {
+        document.getElementById("ans").innerHTML = "Invalid Starting Point And Ending Point"
+    }
+    else {
+        for (let i = start; i < end; i++) {
+            arr_1.push(i)
+
+        }
+        console.log(arr_1)
+        document.getElementById("ans").innerHTML = "Your Array Element Between " + start + " and " + end + " is : " + arr_1
+    }
+
+</script>

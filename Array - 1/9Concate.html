@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>----------------- Concate Two String -----------------</h1>
+        <h3>
+            Enter First String :
+            <input type="text" id="int">
+        </h3>
+        <h3>
+            Enter Second String :
+            <input type="text" id="int">
+        </h3>
+        <h2 id="ans"></h2>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    let str_1 = document.getElementById("int").value
+    let str_2 = document.getElementById("int").value
+    let arr = str_1.concat(" ", str_2)
+
+    if (str_1 === "" && str_2 === "") {
+        document.getElementById("ans").innerHTML = "Invalid String"
+    }
+    else {
+        console.log(arr)
+        document.getElementById("ans").innerHTML += "Concat Of String is : " + arr
+    }
+
+</script>

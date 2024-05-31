@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>----------------- Convert String To Lowercase -----------------</h1>
+        <h3>
+            Enter String [in Uppercase] :
+            <input type="text" id="int">
+        </h3>
+        <h2 id="ans"></h2>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    let lower = document.getElementById("int").value
+    let arr = upper.toLowerCase()
+
+    if (lower === "") {
+        document.getElementById("ans").innerHTML = "Invalid String"
+    }
+    else {
+        console.log(arr)
+        document.getElementById("ans").innerHTML += "Convert String into LowerCase is : " + arr
+    }
+
+</script>

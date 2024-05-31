@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>----------------- Find Vowel in String Using charAt() -----------------</h1>
+        <h3>
+            Enter Any String :
+            <input type="text" id="int">
+        </h3>
+        <h2 id="ans"></h2>
+    </center>
+
+</body>
+
+</html>
+
+<script>
+
+    let str = document.getElementById("int").value
+
+    if (str === "") {
+        document.getElementById("ans").innerHTML = "Invalid String"
+    }
+    else {
+        for (let i = 0; str[i]; i++) {
+            if (str[i] == "a" || str[i] == "A" ||
+                str[i] == "e" || str[i] == "E" ||
+                str[i] == "i" || str[i] == "I" ||
+                str[i] == "o" || str[i] == "O" ||
+                str[i] == "u" || str[i] == "U") {
+                console.log(str[i] + " is Vowel")
+                document.getElementById("ans").innerHTML += str[i] + " is Vowel...<br>"
+                str.charAt(str[i])
+            }
+            else {
+                console.log(str[i])
+                document.getElementById("ans").innerHTML += str[i] + "<br>"
+            }
+
+        }
+    }
+
+
+</script>
