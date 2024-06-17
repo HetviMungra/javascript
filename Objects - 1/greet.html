@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>------------------- Create Method in 'Student' -------------------</h1>
+    </center>
+
+    <h3 id="student_info"></h3>
+</body>
+</html>
+<script>
+
+let student = {
+        StudentName : "Hetvi Mungra",
+        StudentAge : 17,
+        StudentCource : "BCA"
+    }
+    for(key in student)
+    {
+        document.getElementById("student_info").innerHTML += key + " = " + student[key] + "<br>"
+        console.log(key + " = " + student[key])
+    }
+    student.greet = function(){
+        console.log("Have a Nice Day !!!")
+        document.getElementById("student_info").innerHTML += "Have a Nice Day !!!"
+    }
+    student.greet()
+
+</script>
