@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+      <i><u> <h1>
+        Question 2: Categorize Quotes
+       </h1></u>
+       <b>       <h3 style="color: blue; font-size: xx-large;">Answer in console....</h3>
+       </b></i>
+    </center>
+</body>
+</html>
+<script>
+    
+    let quotes = [
+  { text: "Get busy living or get busy dying.", author: " Stephen King", category: "inspiration" },
+  { text: "Education is not preparation for life; education is life itself.", author: "John Dewey", category: "education" },
+  { text: "You only live once, but if you do it right, once is enough.", author: "Mae West", category: "humor" },
+  { text: "Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family.", author: "Kofi Annan", category: "education" },
+  { text: "Many of life’s failures are people who did not realize how close they were to success when they gave up.", author: "Mark Zuckerberg", category: "business" },
+];
+
+const edQuotes = [];
+
+
+for (let i = 0; i < quotes.length; i++) {
+    if (quotes[i].category === "education") {
+        edQuotes.push(quotes[i]);  
+         
+    }
+}
+
+console.log(edQuotes);
+
+
+</script>

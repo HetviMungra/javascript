@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<center>
+
+<u><i>    <h1>Question 3: Book Inventory Management</h1>
+</i></u>
+    <b><h3 id="book_mang"></h3>
+    </b>
+
+</center>
+</body>
+</html>
+<script>
+    const books = [
+    { title: "War and Peace", author:"Leo Tolstoy", price: 55, quantityAvailable: 5 },
+    { title: "Time Machine", author: "H.G Wells", price: 65, quantityAvailable: 2 },
+    { title: "The world as I see it", author: "Albert Einstein", price: 45, quantityAvailable: 0 },
+    { title: "Treasure Island", author:"R.L. Stevenson", price: 30, quantityAvailable: 3 },
+    { title: "The Tempest", author: "William Shakespeare", price: 50, quantityAvailable: 1 }
+];
+const budget = 60;
+
+function Books(books, budget) {
+    return books.filter(
+        book => book.price <= budget && book.quantityAvailable > 0
+    ).map((el)=>
+    {
+        return "Title : "+el.title +"<br>Author : "+el.author +"<br>Price : "+el.price +"<br>QuantityAvailable : "+el.book +"<br><br>"
+    })
+}
+
+const affordableBooks = Books(books, budget);
+
+console.log(affordableBooks);
+document.getElementById("book_mang").innerHTML = "<h2 style='color: blue;'>Price Less Than 60 and Quantity is More Than 0</h2><br>"+affordableBooks
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+<i><u><b>  
+      <h1>Question 1: student</h1>
+</b></u></i>  
+  <h3 id="studentinfo" ></h3>
+    </center>
+</body>
+</html>
+<script>
+   let student = [
+        {name: "John", roll: 2, mark: 50},
+        {name: "Alice", roll: 18, mark: 90},
+        {name: "Bob", roll: 10, mark: 98},
+        {name: "Eve", roll: 25, mark: 91},
+
+    ];
+    
+    let ans = student.filter(
+        student => student.mark > 90
+    ).map(
+        student => student.name
+    );
+
+    console.log(ans)
+
+    document.getElementById("studentinfo").innerHTML += "<u><h2>Student Score Grater Than 60</h2></u><br> <h3 style ='color: blue;'> Using HOF Function </h3> " + ans
+  
+    // loop
+
+    document.getElementById("studentinfo").innerHTML += "<br><br>"
+    for(let i=0; i<student.length; i++)
+    {
+        if(student[i].mark > 90)
+        {
+            document.getElementById("studentinfo").innerHTML += "<h3 style ='color: blue;'> Using For loop</h3>  "
+
+            document.getElementById("studentinfo").innerHTML += "" + student[i].name
+            console.log(student[i].name)
+        }
+    }
+</script>
