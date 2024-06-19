@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    <p>
+       <u> <b>### Question 1: Students Array</b></u><br>
+Q1. Return name of students with Capital Letters.<br>
+Q2.Return details of students who scored more than 60.<br>
+Q3 Return details of students who scored more than 60 and roll number greater than 15.<br>
+Q4 Sum of marks of all students<br>
+Q5.Return only name of students who scored more than 60<br>
+Q6. Add 20 to each students marks.<br><br>
+<u><b>### Question 2: Categorize Quotes</b></u><br>
+
+Create an array of objects representing quotes. Each quote object contains `text`, `author`, and `category` properties.  If category is education show .
+    </p>
+    <h1>Answer in console. <br>
+        check this..
+    </h1>
+</center>
+</body>
+</html>
+<script>
+
+    let student = [
+        {name: "John", roll: 2, mark: 50},
+        {name: "Alice", roll: 18, mark: 80},
+        {name: "Bob", roll: 10, mark: 18},
+        {name: "Eve", roll: 25, mark: 70},
+
+    ];
+
+    for (let i=0; i<student.length; i++)
+    {
+        console.log (student[i].name.toUpperCase())
+    }
+
+    // scored more than 60.
+ 
+    let ans =student.filter((el)=>{
+        return el.mark > 60
+    })
+    console.log(ans)
+
+    // cored more than 60 and roll number greater than 15.
+
+    let ans1 =student.filter((el)=>{
+        return el.mark > 60 && el.roll > 15 
+    })
+    console.log(ans1)
+
+    // Sum of marks of all students
+
+    let ans2 = student.reduce((acc , curr)=>{
+    return acc + curr.mark
+    },0)
+    console.log(ans2)
+
+    // Return only name of students who scored more than 60
+
+    let ans3 = student.filter(
+        student => student.mark > 60
+    ).map(
+        student => student.name
+    );
+
+    console.log(ans3); 
+
+    // Add 20 to each students marks.
+
+    student.forEach( student =>
+        student.mark += 20
+    );
+
+    console.log(student);
+
+    // q-2
+
+    let Quotes = [
+  { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt", category: "inspiration" },
+  { text: "Education is the most powerful weapon which you can use to change the world.", author: "Nelson Mandela", category: "education" },
+  { text: "The only thing we have to fear is fear itself — and spiders.", author: "Franklin D. Roosevelt", category: "humor" },
+  { text: "The highest education is that which does not merely give us information but makes our life in harmony with all existence.", author: "Rabindranath Tagore", category: "education" },
+  { text: "The biggest risk is not taking any risk...", author: "Mark Zuckerberg", category: "business" },
+];
+
+
+let quote = Quotes.filter((el)=>
+    {
+        return el.category === "education"
+    })
+    console.log(quote)
+
+</script>
