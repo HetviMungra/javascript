@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        “Be yourself; everyone else is already taken.”
+    </h1>
+    <button onclick="Chgcolor()"> change color</button>
+
+    <h3>“Be the change that you wish to see in the world.”</h3>
+    <h3>“Be the change that you wish to see in the world.”</h3>
+    <h3>“Be the change that you wish to see in the world.”</h3>
+    <button onclick="Chgcolorall()"> change color</button>
+    
+    <h5>“Live as if you were to die tomorrow. Learn as if you were to live forever.”</h5>
+    <h5>“Live as if you were to die tomorrow. Learn as if you were to live forever.”</h5>
+    <h5>“Live as if you were to die tomorrow. Learn as if you were to live forever.”</h5>
+    <button onclick="Chgcolorh5()"> change color</button>
+
+
+    <p class="green">This is a green paragraph.</p>
+    <div class="green">This is a green div.</div>
+    <span class="green">This is a green span.</span><br>
+    <button onclick="changeGreenBtn()">Change Green</button>
+
+    <p class=" blue">This is a blue paragraph.</p>
+    <div class="blue">This is a blue div.</div>
+    <span class="blue">This is a blue span.</span><br>
+    <button onclick="changeblueBtn()">Change blue</button>
+
+    <p class="red">This is a red paragraph.</p>
+    <div class="red">This is a red div.</div>
+    <span class="red">This is a red span.</span><br>
+    <button onclick="changeredBtn()">Change red</button>
+
+</body>
+</html>
+<script>
+
+    function Chgcolor() {
+
+        document.querySelector("h1").style.color = "red"
+
+    }
+
+    function Chgcolorall() {
+
+        let heading = document.querySelectorAll("h3")
+        for (let i=0;i<heading.length;i++)
+        {
+            heading[i].style.color = "green"
+        }
+
+    }
+    function Chgcolorh5() {
+        let heading_1 = document.querySelectorAll("h5")
+        for (let i=0;i<heading_1.length;i++)
+        {
+            heading_1[i].style.color = "blue"
+        } 
+    }
+
+    function changeGreenBtn() {
+        let heading_2 = document.querySelectorAll(".green")
+        for (let i=0;i<heading_2.length;i++)
+        {
+            heading_2[i].style.color = "green"
+        }  
+    }
+
+    function changeblueBtn() {
+        let heading_3 = document.querySelectorAll(".blue")
+        for (let i=0;i<heading_3.length;i++)
+        {
+            heading_3[i].style.color = "blue"
+        }  
+    }
+    function changeredBtn() {
+        let heading_4 = document.querySelectorAll(".red")
+        for (let i=0;i<heading_4.length;i++)
+        {
+            heading_4[i].style.color = "red"
+        }  
+    }
+
+</script>
