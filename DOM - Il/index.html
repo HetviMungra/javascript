@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U2C3</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Dont make any changes here -->
+    <h1>TODO App</h1>
+    
+
+    <div>
+      <!-- ***** We are using form here  ****  -->
+      <form>
+        <label for="">Task Name</label><br />
+        <input id="task" type="text" placeholder="Enter Task Name" /><br />
+        <label for="">Priority </label><br />
+        <select id="priority">
+          <!-- <option value="">Select Priority</option> -->
+          <option value="High">High</option>
+          <option value="Low">Low</option>
+        ><br />
+        <input type="submit" />
+      </form>
+      <table>
+        <!-- Dont change order of columns -->
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Priority</th>
+            <th>Favourite</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit",todoFun)
+  function todoFun(event)
+  {
+    event.preventDefault()
+    let name = document.getElementById("task").value
+    let id = document.getElementById("priority").value
+
+    let  tr = document.createElement("tr")
+    let td1 = document.createElement("td")
+    td1.innerHTML = name 
+    
+    let td = document.createElement("tr")
+    let td2  = document.createElement("td")
+    td2.innerHTML = id
+    if(id === "High")
+    {
+      td2.style.backgroundColor = 'red'
+    }
+    else
+    {
+      td2.style.backgroundColor = 'green'
+    }
+
+    let td3  = document.createElement("td")
+    td3.innerHTML = "delete"
+
+    
+    tr.append(td1,td2,td3)
+    document.querySelector("tbody").append(tr)
+  }
+</script>
