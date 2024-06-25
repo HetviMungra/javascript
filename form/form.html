@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="registrForm">
+            <i><u><b>
+                        <h2>Registration Form</h2>
+
+                    </b></u></i>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <span class="error" id="passwordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                <span class="error" id="dateError"></span>
+            </div>
+            <div class="form-group">
+                <label for="hobby">Hobby:</label>
+                <input type="text" id="hobby" name="hobby">
+                <span class="error" id="hobbyError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+                <span class="error" id="genderError"></span>
+            </div>
+            <br>
+            
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+    <!-- <script src="form.js"></script> -->
+</body>
+
+</html>
+
+<script>
+    document.getElementById("registrForm").onsubmit = function
+        (event) {
+        event.preventDefault()
+
+        document.getElementById("nameError").innerHTML = ""
+        document.getElementById('passwordError').textContent = '';
+        document.getElementById('confirmPasswordError').textContent = '';
+        document.getElementById('dateError').textContent = '';
+        document.getElementById('hobbyError').textContent = '';
+        document.getElementById('emailError').textContent = '';
+        document.getElementById('genderError').textContent = '';
+
+        let name = document.getElementById("name").value
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+        var date = document.getElementById('date').value;
+        var hobby = document.getElementById('hobby').value;
+        var email = document.getElementById('email').value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+
+        try {
+            if (name === "") {
+                throw new Error("Please Enter name..")
+            }
+
+
+           
+
+        } catch (e) {
+            document.getElementById("nameError").innerHTML = e.message
+
+        }
+        try {
+            
+            if (password === "") {
+                throw new Error("Please Enter password..")
+
+            }
+            else if (password.length < 8) {
+                throw new Error("Password must be more than 8 characters")
+            }
+
+        } catch (e) {
+            document.getElementById("passwordError").innerHTML = e.message
+
+        }
+        try {
+
+            if (confirmPassword !== password) {
+                throw new Error("Passwords do not match")
+            }
+        } catch (e) {
+            document.getElementById("confirmPasswordError").innerHTML = e.message
+
+        }
+        try {
+
+
+            if (date === '') {
+                throw new Error("Please Enter Date..")
+
+            }
+        } catch (e) {
+            document.getElementById("dateError").innerHTML = e.message
+
+        }
+        try {
+            if (email === '') {
+                throw new Error("Please Enter email..")
+
+            }
+        } catch (e) {
+            document.getElementById("emailError").innerHTML = e.message
+
+        }
+        try {
+            if (hobby === '') {
+                throw new Error("Please Enter hobby..")
+
+            }
+        } catch (e) {
+            document.getElementById("hobbyError").innerHTML = e.message
+
+        }
+
+    }
+
+</script>
