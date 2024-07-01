@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <i><u>        <h1> SUM </h1>
+        </u></i>
+        <label for="">Enter a first Number :</label>
+
+        <input type="number" name="" id="in1"> <br><br>
+        <label>Enter a second Number :</label>
+
+        <input type="number" name="" id="in2">
+        <H3 id="in3"></H3>
+
+        <hr>
+
+        <i><u>        <h1> SUB </h1>
+        </u></i>
+        <label for="">Enter a first Number :</label>
+        <input type="number" name="" id="inn1"> <br><br>
+        <label>Enter a second Number :</label>
+        <input type="number" name="" id="inn2">
+        <H3 id="inn3"></H3>
+    </center>
+</body>
+
+</html>
+<script>
+
+    var a = document.getElementById("in1").value
+    var b = document.getElementById("in2").value
+    let sum = 0
+
+
+    var x = document.getElementById("inn1").value
+    var y = document.getElementById("inn2").value
+    let sub = 0
+
+    class Calculator {
+        sum(a, b) {
+
+            sum = +a + +b
+            return sum
+        }
+        sub(x, y) {
+            sub = +x - +y
+            return sub
+        }
+
+    }
+
+    let obj1 = new Calculator()
+    document.getElementById("in3").innerHTML = " TOTAL : " +  obj1.sum(a, b)
+    document.getElementById("inn3").innerHTML = " TOTAL : " +  obj1.sub(x, y)
+
+</script>
