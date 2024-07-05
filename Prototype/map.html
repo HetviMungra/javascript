@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let arr = [1,2,3,4,5]
+
+    Array.prototype.hetvi = function(el){
+        let newArr = []
+        for(let i = 0; i < this.length; i++){
+        
+                newArr.push(el(this[i]))
+            
+        } 
+        return newArr
+    }
+
+    let ans = arr.hetvi((el)=>{
+        return el * 2
+    })
+
+    console.log(ans)
+</script>
