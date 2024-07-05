@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <center>
+    <h1>AUTO MOBILE [ELECTRIC VEHICAL]</h1>
+    <hr>
+
+<h3>Enter Vehicle Name :</h3>
+    <input type="text" id="name_vehicle">
+
+<h3>Enter Price Name :</h3>
+    <input type="number" id="price_vehicle">
+
+<h3>Enter Color Name :</h3>
+    <input type="text" id="color_vehicle">
+
+<h2 id="vehicle_answer"></h2>
+  </center>
+
+</body>
+</html>
+<script>
+  let name_vehicle = document.getElementById("name_vehicle").value
+let price_vehicle = document.getElementById("price_vehicle").value
+let color_vehicle = document.getElementById("color_vehicle").value
+
+if(name_vehicle === "" || price_vehicle === "" || color_vehicle === "")
+{
+document.getElementById("vehicle_answer").innerHTML += "Invalid vehical Name, Price And Color..."
+}
+else
+{
+class Automobile
+{
+    constructor(name_vehicle, price_vehicle, color_vehicle)
+    {
+        this.name_vehicle = name_vehicle
+        this.price_vehicle = price_vehicle
+        this.color_vehicle = color_vehicle
+    }
+}
+class Electricvehicle extends Automobile
+{
+    name()
+    {
+        document.getElementById("vehicle_answer").innerHTML += "Vehicle Name is : " + this.name_vehicle 
+        console.log("Vehicle Name is : " + this.name_vehicle)
+    }
+    price()
+    {
+        document.getElementById("vehicle_answer").innerHTML += "<br>Vehicle Price is : " + this.price_vehicle 
+        console.log("Vehicle Price is : " + this.price_vehicle)
+    }
+    color()
+    {
+        document.getElementById("vehicle_answer").innerHTML += "<br>Vehicle Color is : " + this.color_vehicle 
+        console.log("Vehicle Color is : " + this.color_vehicle)
+    }
+}
+
+let vehicle_obj = new Electricvehicle(name_vehicle, price_vehicle, color_vehicle)
+vehicle_obj.name()
+vehicle_obj.price()
+vehicle_obj.color()
+}
+
+</script>

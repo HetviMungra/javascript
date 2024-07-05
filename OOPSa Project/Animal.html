@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>--------------- Animal [Cat & Dog] ---------------</h1>
+    </center>
+    <h3>
+        Enter Cat Name :
+        <input type="text" id="cat">
+    </h3>
+    <h3>
+        Enter Dog Name :
+        <input type="text" id="dog">
+    </h3>
+    <h2 id="al_answer"></h2>
+
+</body>
+</html>
+<script>
+
+
+
+
+let cat = document.getElementById("cat").value
+let dog = document.getElementById("dog").value
+
+if(cat === "" || dog === "")
+{
+    document.getElementById("aal_answer").innerHTML += "Invalid Cat Name And Dog Name..."
+}
+else
+{
+    class Animal
+    {
+        constructor(cat, dog)
+        {
+            this.cat = cat
+            this.dog = dog
+        }
+    }
+    class Cat extends Animal
+    {
+        eat()
+        {
+            document.getElementById("al_answer").innerHTML += "<u>Cat</u><br>"
+            document.getElementById("al_answer").innerHTML += this.cat + " Drinks Milk...<br>"
+            console.log(this.cat + " Drinks Milk...")
+        }
+        sleep()
+        {
+            document.getElementById("al_answer").innerHTML += this.cat + "'s Voice is meows meows meows meows...<br>"
+            console.log(this.cat + "'s Voice is meows meows meows meows...")
+        }
+        sound()
+        {
+            document.getElementById("al_answer").innerHTML += this.cat + " is Sleeping Now...<br>"
+            console.log(this.cat + " is Sleeping Now...")
+        }
+    }
+    class Dog extends Animal
+    {
+        eat()
+        {
+            document.getElementById("al_answer").innerHTML += "<br><u>Dog</u><br>"
+            document.getElementById("al_answer").innerHTML += this.dog + " Drinks Biscuit...<br>"
+            console.log(this.dog + "'s Voice is meows meows meows meows...")
+        }
+        sleep()
+        {
+            document.getElementById("al_answer").innerHTML += this.dog + "'s Voice is bow wow bow wow...<br>"
+            console.log(this.dog + "'s Voice is bow wow bow wow...")
+        }
+        sound()
+        {
+            document.getElementById("al_answer").innerHTML += this.dog + " is Sleeping Now...<br>"
+            console.log(this.dog + " is Sleeping Now...")
+        }
+    }
+    let cat_obj = new Cat(cat, dog)
+    cat_obj.eat()
+    cat_obj.sleep()
+    cat_obj.sound()
+
+    let dog_obj = new Dog(cat, dog)
+    dog_obj.eat()
+    dog_obj.sleep()
+    dog_obj.sound()
+}
+</script>
