@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+      <b><u><i>  <h1>---- Animals and Sounds ----</h1>
+      </i></u></b>
+    <h2>
+        Enter Dog Name :
+        <input type="text" id="dog_name">
+    </h2>
+    <h2>
+        Enter Cat Name :
+        <input type="text" id="cat_name">
+    </h2>
+    <h2>
+        Enter Bird Name :
+        <input type="text" id="bird_name">
+    </h2>
+    <h2 id="animal_sound" ></h2>
+</center>
+</body>
+</html>
+<script>
+    let dog_name = document.getElementById("dog_name").value
+let cat_name = document.getElementById("cat_name").value
+let bird_name = document.getElementById("bird_name").value
+
+class Animals
+{
+    constructor(name)
+    {
+        this.name = name
+    }
+}
+class Dog extends Animals
+{
+    sound()
+    {
+        document.getElementById("animal_sound").innerHTML += this.name + " Sound is bow wow bow wow...<br>"
+        console.log(this.name + " Sound is bow wow bow wow...")
+    }
+}
+class Cat extends Animals
+{
+    sound()
+    {
+        document.getElementById("animal_sound").innerHTML += this.name + " Sound is meows meows meows meows...<br>"
+        console.log(this.name + " Sound is meows meows meows meows...")
+    }
+}
+class Bird extends Animals
+{
+    sound()
+    {
+        document.getElementById("animal_sound").innerHTML += this.name + " Sound is Chirps Chirps Chirps..."
+        console.log(this.name + " Sound is Chirps Chirps Chirps  ...")
+    }
+}
+
+let dog_sound = new Dog(dog_name)
+dog_sound.sound()
+let cat_sound = new Cat(cat_name)
+cat_sound.sound()
+let bird_sound = new Bird(bird_name)
+bird_sound.sound()
+
+
+
+</script>
