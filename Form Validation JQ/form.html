@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <form action="" id="sign_up">
+            <br>
+            <center class="heading">
+                <h1>Registration Form</h1>
+                <h4>Fill Out The Form Carefully For Registration</h4>
+            </center>
+            <br><br>
+            <label for="">Student Name</label>
+            <br>
+            <div class="input_flex">
+                <div>
+                    <input type="text" id="first_name">
+                    <p>First Name</p>
+                </div>
+                &nbsp;
+                <!-- <div>
+                    <input type="text" id="middle_name">
+                    <p>Middle Name</p>
+                </div> -->
+                &nbsp;
+                <div>
+                    <input type="text" id="last_name">
+                    <p>Last Name</p>
+                </div>
+            </div>
+            <span id="name_err"></span>
+
+            <br><br>
+            <div class="flex">
+                <div class="flex_space">
+                    <label for="">Gender</label>
+                    <br>
+                    <select id="gender" class="select_input">
+                        <option value="">Select Your Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <span id="gender_err"></span>
+                </div>
+                <div class="flex_space">
+                    <label for="">Student E-mail</label>
+                    <br>
+                    <input type="text" id="email" class="input_width">
+                    <p>example@gmail.com</p>
+                    <span id="email_err"></span>
+                </div>
+            </div>
+
+            <br><br>
+            <div class="flex">
+                <div class="flex_space">
+                    <label for="">Student ID</label>
+                    <br>
+                    <input type="text" id="id" class="input_width">
+                    <span id="id_err"></span>
+                </div>
+                <div class="flex_space">
+                    <label for="">List Of Classes</label>
+                    <br>
+                    <select id="classes" class="select_input">
+                        <option value="">Select Your Classes</option>
+                        <option value="HTML / CSS">HTML / CSS</option>
+                        <option value="JQuery">JQuery</option>
+                        <option value="Bootstrap">Bootstrap</option>
+                        <option value="DSA">DSA</option>
+                        <option value="C Language">C Language</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Node JS">Node JS</option>
+                        <option value="React JS">React JS</option>
+                        <option value="Mongo DB">Mongo DB</option>
+                    </select>
+                    <span id="class_err"></span>
+                </div>
+            </div>
+
+            <br><br>
+            <center>
+                <input type="submit" />
+            </center>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function(){
+    $("#sign_up").submit(function(event){
+        event.preventDefault()
+
+
+        //Student Name 
+
+        let first_name = $("#first_name").val()
+        // let middle_name = $("#middle_name").val()
+        let last_name = $("#last_name").val()
+
+        let name_Regex = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/
+        $("#name_err").text("")
+
+        if(first_name === "" || last_name === "")
+        {
+            $("#name_err").text("Please Enter Name !!!")
+        }
+        else if(!name_Regex.test(first_name) || !name_Regex.test(last_name))
+        {
+            $("#name_err").text("Enter Valid Name... Like Aastha Hiteshbhai Katharotiya")
+        }
+
+
+        //Gender
+
+        let gender = $("#gender").val()
+        $("#gender_err").text("")
+
+        if(gender === "")
+        {
+            $("#gender_err").text("Please Select Appropriate Gender !!!")
+        }
+
+
+        //Student E-mail
+
+        let email = $("#email").val()
+        let email_Regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+        $("#email_err").text("")
+
+        if(email === "")
+        {
+            $("#email_err").text("Please Enter Email !!!")
+        }
+        else if(!email_Regex.test(email))
+        {
+            $("#email_err").text("Enter Valid Email... Like aastha@gmail.com")
+        }
+
+
+        //Student ID
+
+        let id = $("#id").val()
+        let id_Regex = /^[0-9]/
+        $("#id_err").text("")
+
+        if(id === "")
+        {
+            $("#id_err").text("Please Enter Student Id !!!")
+        }
+        else if(id.length != 4)
+        {
+            $("#id_err").text("must be at least 4 Digit long")
+        }
+        else if(!id_Regex.test(id))
+        {
+            $("#id_err").text("Enter Valid Student ID... Like 7257")
+        }
+
+
+        //List Of Classes
+
+        let classes = $("#classes").val()
+        $("#class_err").text("")
+
+        if(classes === "")
+        {
+            $("#class_err").text("Please Select Appropriate Classes !!!")
+        }
+    })
+})
+
+</script>
