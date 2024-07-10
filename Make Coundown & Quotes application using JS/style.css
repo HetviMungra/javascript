@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.cou{
+    height: 150px;
+    width: 98%;
+    background-color: rgb(0, 0, 0);
+    margin: 10px 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.cou .icon-1{
+padding: 1%;
+    height: inherit;
+    width: 25%;
+    /* border: 1px solid rgb(255, 255, 255); */
+
+}
+.icon-1 i{
+    display: flex;
+    justify-content: center;
+    padding: 4%;
+}
+
+.icon-1 h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.icon-1 p{
+    color: rgba(205, 201, 201, 0.425);
+    display: flex;
+    justify-content: center;  
+}
