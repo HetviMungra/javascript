@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        display: block;
+        width: 98%;
+        height: 450px;
+        border-radius: 10px;
+        margin: 5% 0%;
+        border: 3px solid rgba(51, 50, 50, 0.523);
+    }
+</style>
+<body>
+<center>
+        <i><u><b><h1>Slider</h1></b></u></i>
+    <img src="9be788ff-39a4-4214-99d0-fc97505aae5a1658752545685-USPA_Desk_Banner.jpg" alt="">
+    <img src="179e278f-77ee-44c2-bf39-9f00b0cd08e01658752429301-Handbags_Desk.jpg" alt="">
+    <img src="4031994d-9092-4aa7-aea1-f52f2ae5194f1654006594976-Activewear_DK.jpg" alt="">
+    <img src="b656a7f4-4688-4997-bb7c-54b78793981e1658752386588-Western-Wear_Desk.jpg" alt="">
+
+</center>
+</body>
+</html>
+<script>
+    let pic = document.querySelectorAll("img")
+    let index = 0
+
+    function slides(index){
+        for(let i = 0 ;i< pic.length ; i++){
+            pic[i].style.display = "none"
+        }
+        pic[index].style.display = "block"
+    }
+    function show(){
+        setInterval(()=>{
+            slides(index)
+            index++
+            if(index === 4)
+            index = 0 
+        },2000)
+    }
+    show()
+</script>
