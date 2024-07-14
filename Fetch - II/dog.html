@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+   
+         
+
+.main-img{
+  height: 50%; 
+  width: 50%; 
+  border: 1px solid black;
+
+        
+}
+</style>
+
+<body>
+   <center>
+    <div id="main"></div>
+   </center>
+  
+</body>
+</html>
+
+<script>
+    fetch('https://dog.ceo/api/breeds/image/random')
+    .then((res)=>{
+        return res.json()
+    }).then((json)=>{
+        console.log(json)
+        displayDate(json)
+    }).catch((err)=>{
+        console.log(err)
+    })
+
+    function displayDate(json){
+      let box = document.createElement("div")
+      let pic = document.createElement("img")
+      pic.setAttribute("src",json.message)
+
+      box.append(pic)
+      document.getElementById("main").append(box)
+    }
+</script>
