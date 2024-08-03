@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 India Data</title>
+    <link rel="stylesheet" href="covid.css">
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <div class="covid-container">
+                <b><h1>COVID-19 India Data</h1></b>
+                <hr style="color: white;">
+                <br>
+                <input type="text" id="stateInput" placeholder="Enter state code (e.g., GJ, MH, DL)">
+                <button onclick="fetchData()">Search</button>
+                <div id="output"></div>
+
+            </div>
+        </div>
+
+    </center>
+</body>
+
+</html>
+<script>
+    async function fetchData() {
+        const stateCode = document.getElementById('stateInput').value.toUpperCase();
+        const url = 'https://data.covid19india.org/v4/min/data.min.json';
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data[stateCode]) {
+                const stateData = data[stateCode].total;
+                const tested = stateData.tested || 'N/A';
+                const vaccinated1 = stateData.vaccinated1 || 'N/A';
+                const vaccinated2 = stateData.vaccinated2 || 'N/A';
+                const recovered = stateData.recovered || 'N/A';
+
+                document.getElementById('output').innerHTML = `
+            <u>   <h2>Data for ${stateCode}</h2></u>
+                <p>Tested: ${tested}</p>
+                <p> Recovered :${recovered} </p>
+                
+                <p>Vaccinated (Dose 1): ${vaccinated1}</p>
+                <p>Vaccinated (Dose 2): ${vaccinated2}</p>
+            `;
+            } else {
+                document.getElementById('output').innerHTML = `<p>State code not found.</p>`;
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            document.getElementById('output').innerHTML = `<p>Error fetching data.</p>`;
+        }
+    }
+
+</script>
