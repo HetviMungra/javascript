@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+// Initial array
+let fruits = ["apple", "banana", "mango", "orange", "grape"];
+console.log("Initial Array:", fruits);
+
+// 1. push() - Adds one or more elements to the end of an array and returns the new length of the array.
+fruits.push("pineapple");
+console.log("After push:", fruits);
+
+// 2. pop() - Removes the last element from an array and returns that element.
+let lastFruit = fruits.pop();
+console.log("After pop:", fruits);
+console.log("Popped element:", lastFruit);
+
+// 3. slice() - Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included).
+let slicedFruits = fruits.slice(1, 3); // slices from index 1 to 3 (not including 3)
+console.log("After slice (1, 3):", slicedFruits);
+
+// 4. splice() - Changes the contents of an array by removing or replacing existing elements and/or adding new elements.
+let removedFruits = fruits.splice(2, 1, "kiwi", "watermelon"); // Removes 1 element at index 2 and adds "kiwi" and "watermelon"
+console.log("After splice (2, 1, 'kiwi', 'watermelon'):", fruits);
+console.log("Removed element(s):", removedFruits);
+
+// 5. shift() - Removes the first element from an array and returns that removed element.
+let firstFruit = fruits.shift();
+console.log("After shift:", fruits);
+console.log("Shifted element:", firstFruit);
+
+// 6. unshift() - Adds one or more elements to the beginning of an array and returns the new length of the array.
+fruits.unshift("strawberry", "blueberry");
+console.log("After unshift ('strawberry', 'blueberry'):", fruits);
+
+// 7. map() - Creates a new array populated with the results of calling a provided function on every element in the calling array.
+let uppercasedFruits = fruits.map(fruit => fruit.toUpperCase());
+console.log("After map (toUpperCase):", uppercasedFruits);
+
+// 8. filter() - Creates a new array with all elements that pass the test implemented by the provided function.
+let filteredFruits = fruits.filter(fruit => fruit.length > 6);
+console.log("After filter (length > 6):", filteredFruits);
+
+// 9. reduce() - Executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+let concatenatedFruits = fruits.reduce((acc, fruit) => acc + " " + fruit);
+console.log("After reduce (concatenation):", concatenatedFruits);
+
+// 10. sort() - Sorts the elements of an array in place and returns the array.
+let sortedFruits = fruits.slice().sort(); // Using slice() to sort a copy of the array to keep the original order intact
+console.log("After sort:", sortedFruits);
+
+// 11. reverse() - Reverses the order of the elements in an array in place and returns the array.
+let reversedFruits = fruits.slice().reverse(); 
+console.log("After reverse:", reversedFruits);
+
+</script>
